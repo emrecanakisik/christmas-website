@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.gift-box-anim-container {
+  position: relative;
+  border: 1px dashed #000;
+  width: 50vw;
+  height: 70vh;
+  img {
+    position: absolute;
+    bottom: 0;
+  }
+  #img1 {
+    z-index: 1;
+    left: 52.08vw;
+    width: 5vw;
+    animation: i1 2s forwards ease;
+  }
+  #img2 {
+    left: 3.9vw;
+    left: 52.08vw;
+    width: 12vw;
+    animation: i2 3s forwards ease;
+  }
+  #img2-1 {
+    left: 59.89vw;
+    bottom: 13.8vw;
+    width: 4.5vw;
+    animation: i2-1 3s forwards ease;
+  }
+  #img3 {
+    z-index: 1;
+    left: 78.12vw;
+    width: 6.7vw;
+    transform: rotate(-5deg);
+    animation: i3 3s forwards ease;
+  }
+  #img4 {
+    left: 98.95vw;
+    width: 9vw;
+    animation: i4 3s forwards ease;
+  }
+  #img5 {
+    z-index: 1;
+    left: 119.79vw;
+    width: 15.2vw;
+    animation: i5 3s forwards ease;
+  }
+  #img6 {
+    left: 135.41vw;
+    width: 14.5vw;
+    animation: i6 3s forwards ease;
+  }
+  #img6-1 {
+    left: 130.2vw;
+    bottom: 13.2vw;
+    width: 10vw;
+    animation: i6-1 3s forwards ease;
+  }
+  #img6-1-1 {
+    z-index: -1;
+    left: 140.62vw;
+    bottom: 13.2vw;
+    width: 13vw;
+    animation: i6-1-1 3s forwards ease;
+  }
+  #img6-1-1-1 {
+    z-index: -1;
+    left: 145.83vw;
+    bottom: 23.4vw;
+    width: 5vw;
+    animation: i6-1-1-1 3s forwards ease;
+  }
+  #img7 {
+    left: 156.25vw;
+    width: 7.2vw;
+    transform: rotate(-5deg);
+    animation: i7 3s forwards ease;
+  }
+}

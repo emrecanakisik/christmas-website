@@ -1,0 +1,103 @@
+@keyframes i1 {
+  to {
+    left: 0;
+  }
+}
+
+@keyframes i2 {
+  to {
+    left: 3.9vw;
+  }
+}
+@keyframes i2-1 {
+  to {
+    left: 8vw;
+    bottom: 13.8vw;
+  }
+  /* 0% {
+    transform: rotate(90deg);
+  }
+  70% {
+    transform: rotate(90deg);
+    bottom: 16.4vw;
+    left: 20vw;
+  }
+  75% {
+    transform: rotate(85deg);
+    bottom: 16.4vw;
+    left: 17vw;
+  }
+  80% {
+    bottom: 15.8vw;
+    left: 14vw;
+    transform: rotate(75deg);
+  }
+  85% {
+    bottom: 15.5vw;
+    left: 12vw;
+    transform: rotate(60deg);
+  }
+  90% {
+    bottom: 15vw;
+    transform: rotate(40deg);
+  }
+  95% {
+    transform: rotate(20deg);
+  } */
+}
+
+@keyframes i3 {
+  to {
+    left: 10.5vw;
+    transform: rotate(0deg);
+  }
+  96% {
+    transform: rotate(-1deg);
+  }
+}
+
+@keyframes i4 {
+  to {
+    left: 16vw;
+  }
+}
+
+@keyframes i5 {
+  to {
+    left: 18.5vw;
+  }
+}
+
+@keyframes i6 {
+  to {
+    left: 25.3vw;
+  }
+}
+@keyframes i6-1 {
+  to {
+    left: 29.5vw;
+  }
+}
+@keyframes i6-1-1 {
+  to {
+    left: 22.4vw;
+  }
+}
+@keyframes i6-1-1-1 {
+  to {
+    left: 23.4vw;
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes i7 {
+  to {
+    left: 40.1vw;
+    transform: rotate(0deg);
+  }
+  95% {
+    transform: rotate(-1deg);
+  }
+}
