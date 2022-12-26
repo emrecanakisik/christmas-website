@@ -2,81 +2,178 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Grand Hotel", cursive;
+  font-family: "Pacifico", cursive;
+  font-family: "Nunito", sans-serif;
 }
-.gift-box-anim-container {
-  position: relative;
-  border: 1px dashed #000;
-  width: 50vw;
-  height: 70vh;
-  img {
-    position: absolute;
-    bottom: 0;
+
+$dirty-white: #faedf0;
+$white: #fcffe7;
+$blue-1: #292c6d;
+$blue-2: #2b3467;
+$blue-3: #161853;
+$baby-blue: #bad7e9;
+$red-1: #eb455f;
+$red-2: #ec255a;
+
+nav {
+  display: flex;
+  width: 100%;
+  padding: 0.7vw;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $blue-1;
+  a:hover {
+    color: $red-2;
   }
-  #img1 {
-    z-index: 1;
-    left: 52.08vw;
-    width: 5vw;
-    animation: i1 2s forwards ease;
+  a {
+    text-decoration: none;
+    transition: 0.2s;
+    padding: 0 0.7vw;
+    font-size: 19px;
+    font-weight: 500;
+    color: $dirty-white;
   }
-  #img2 {
-    left: 3.9vw;
-    left: 52.08vw;
-    width: 12vw;
-    animation: i2 3s forwards ease;
+  .icon-title {
+    display: flex;
+    align-items: center;
+    img {
+      width: 1.5vw; /* 
+      height: 1.5vw; */
+    }
+    a {
+      padding: 0 0.4vw;
+      transition: 0.2s;
+      font-size: 21px;
+    }
   }
-  #img2-1 {
-    left: 59.89vw;
-    bottom: 13.8vw;
-    width: 4.5vw;
-    animation: i2-1 3s forwards ease;
+  .content-links {
+    display: flex;
+    align-items: center;
   }
-  #img3 {
-    z-index: 1;
-    left: 78.12vw;
-    width: 6.7vw;
-    transform: rotate(-5deg);
-    animation: i3 3s forwards ease;
+}
+
+header {
+  display: flex;
+  background-color: $blue-1;
+  justify-content: space-between;
+  width: 100%;
+  height: 90vh;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  .header-text-container {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8vw;
+    color: $dirty-white;
+    h1,
+    p,
+    a {
+      margin: 0.5vw;
+    }
+    h1 {
+      font-size: 50px;
+      line-height: 60px;
+    }
+    p {
+      width: 80%;
+      font-size: 17px;
+      font-weight: 600;
+      margin-top: 0;
+    }
+    a {
+      margin-top: 1vw;
+      width: 8vw;
+      text-align: center;
+      padding: 0.5vw 0;
+      border-radius: 30px;
+      text-decoration: none;
+      color: $dirty-white;
+      font-size: 18px;
+      font-weight: 600;
+      background-color: $red-1;
+    }
   }
-  #img4 {
-    left: 98.95vw;
-    width: 9vw;
-    animation: i4 3s forwards ease;
-  }
-  #img5 {
-    z-index: 1;
-    left: 119.79vw;
-    width: 15.2vw;
-    animation: i5 3s forwards ease;
-  }
-  #img6 {
-    left: 135.41vw;
-    width: 14.5vw;
-    animation: i6 3s forwards ease;
-  }
-  #img6-1 {
-    left: 130.2vw;
-    bottom: 13.2vw;
-    width: 10vw;
-    animation: i6-1 3s forwards ease;
-  }
-  #img6-1-1 {
-    z-index: -1;
-    left: 140.62vw;
-    bottom: 13.2vw;
-    width: 13vw;
-    animation: i6-1-1 3s forwards ease;
-  }
-  #img6-1-1-1 {
-    z-index: -1;
-    left: 145.83vw;
-    bottom: 23.4vw;
-    width: 5vw;
-    animation: i6-1-1-1 3s forwards ease;
-  }
-  #img7 {
-    left: 156.25vw;
-    width: 7.2vw;
-    transform: rotate(-5deg);
-    animation: i7 3s forwards ease;
+
+  .gift-box-anim-container {
+    position: relative;
+    width: 48vw;
+    height: 70vh;
+    overflow: hidden;
+    img {
+      position: absolute;
+      bottom: 0;
+    }
+    #img1 {
+      z-index: 2;
+      left: 52.08vw;
+      width: 5vw;
+      animation: i1 2s forwards ease;
+    }
+    #img2 {
+      left: 3.9vw;
+      left: 52.08vw;
+      width: 12vw;
+      animation: i2 3s forwards ease;
+    }
+    #img2-1 {
+      left: 59.89vw;
+      bottom: 13.8vw;
+      width: 4.5vw;
+      animation: i2-1 3s forwards ease;
+    }
+    #img3 {
+      z-index: 2;
+      left: 78.12vw;
+      width: 6.7vw;
+      transform: rotate(-5deg);
+      animation: i3 3s forwards ease;
+    }
+    #img4 {
+      z-index: 2;
+      left: 98.95vw;
+      width: 9vw;
+      animation: i4 3s forwards ease;
+    }
+    #img5 {
+      z-index: 2;
+      left: 119.79vw;
+      width: 15.2vw;
+      animation: i5 3s forwards ease;
+    }
+    #img6 {
+      left: 135.41vw;
+      width: 14.5vw;
+      animation: i6 3s forwards ease;
+    }
+    #img6-1 {
+      z-index: 2;
+      left: 130.2vw;
+      bottom: 13.2vw;
+      width: 10vw;
+      animation: i6-1 3s forwards ease;
+    }
+    #img6-1-1 {
+      z-index: 0;
+      left: 140.62vw;
+      bottom: 13.2vw;
+      width: 13vw;
+      animation: i6-1-1 3s forwards ease;
+    }
+    #img6-1-1-1 {
+      z-index: 0;
+      left: 145.83vw;
+      bottom: 23.4vw;
+      width: 5vw;
+      animation: i6-1-1-1 3s forwards ease;
+    }
+    #img7 {
+      left: 156.25vw;
+      width: 7.2vw;
+      transform: rotate(-5deg);
+      animation: i7 3s forwards ease;
+    }
   }
 }
