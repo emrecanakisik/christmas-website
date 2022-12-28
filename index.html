@@ -10,6 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./animation.css" />
     <title>Document</title>
@@ -63,7 +70,35 @@
         </div>
         <img src="./assets/santa-claus.svg" alt="" />
       </div>
+
+      <div class="gift-items-container">
+        <h1>Share A Gift</h1>
+        <div class="gift-items"></div>
+      </div>
+      <div class="mail-box">
+        <div class="mail-box-text-container">
+          <h1>Send Good Wishes</h1>
+          <p>Don't forget to send good wishes.</p>
+          <div class="mail-input-box">
+            <input type="email" name="" id="mail-email" placeholder="Mail" />
+            <textarea
+              name=""
+              id="mail-textarea"
+              cols="30"
+              rows="10"
+              placeholder="Your text message"
+            ></textarea>
+            <button id="mail-box-send-btn">Send</button>
+          </div>
+        </div>
+        <img src="./assets/envelope.svg" alt="" />
+      </div>
     </main>
+    <footer></footer>
+    <div class="feedback">
+      <h1>Your message has been sent!</h1>
+      <i class="fa-solid fa-xmark"></i>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

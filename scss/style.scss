@@ -15,14 +15,48 @@ $blue-3: #161853;
 $baby-blue: #bad7e9;
 $red-1: #eb455f;
 $red-2: #ec255a;
-
+$success: #21bf73;
+$black-opa-5: rgba(0, 0, 0, 0.5);
+@mixin a-btn($bg-color) {
+  margin-top: 1vw;
+  text-align: center;
+  padding: 0.5vw 1.3vw;
+  border-radius: 30px;
+  text-decoration: none;
+  color: $dirty-white;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: $bg-color;
+}
+@mixin mail-input($height, $padding) {
+  width: 100%;
+  height: $height;
+  padding: $padding;
+  font-size: 16px;
+  margin: 0.5vw 0;
+  border-radius: 0.25rem;
+  background-color: $dirty-white;
+  color: $red-1;
+  font-weight: 600;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+body {
+  background-color: #fff;
+}
 nav {
   display: flex;
+  position: fixed;
   width: 100%;
   padding: 0.7vw;
   justify-content: space-around;
   align-items: center;
-  background-color: $blue-1;
+  background-color: transparent;
+  transition: 0.2s;
+  backdrop-filter: blur(20px);
+  z-index: 3;
   a:hover {
     color: $red-2;
   }
@@ -55,17 +89,19 @@ nav {
 
 header {
   display: flex;
+  justify-content: space-around;
   background-color: $blue-1;
-  justify-content: space-between;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
+  padding: 4vw;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   .header-text-container {
-    width: 50vw;
+    width: 45vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     padding: 8vw;
     color: $dirty-white;
     h1,
@@ -84,24 +120,14 @@ header {
       margin-top: 0;
     }
     a {
-      margin-top: 1vw;
-      width: 8vw;
-      text-align: center;
-      padding: 0.5vw 0;
-      border-radius: 30px;
-      text-decoration: none;
-      color: $dirty-white;
-      font-size: 18px;
-      font-weight: 600;
-      background-color: $red-1;
+      @include a-btn($red-1);
     }
   }
 
   .gift-box-anim-container {
     position: relative;
-    width: 48vw;
+    width: 50vw;
     height: 70vh;
-    overflow: hidden;
     img {
       position: absolute;
       bottom: 0;
@@ -175,5 +201,205 @@ header {
       transform: rotate(-5deg);
       animation: i7 3s forwards ease;
     }
+  }
+}
+
+main {
+  padding: 0 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .send-wish-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60vh;
+    .send-wish-text-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 50%;
+      h1,
+      p,
+      a {
+        margin: 0.3vw 0;
+      }
+      h1 {
+        width: 80%;
+      }
+      p {
+        width: 90%;
+        font-weight: 700;
+        color: $black-opa-5;
+      }
+      a {
+        @include a-btn($red-1);
+      }
+    }
+    img {
+      height: 70%;
+    }
+  }
+  .gift-items-container {
+    text-align: center;
+    padding: 1vw 7.5vw;
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0 0 1vw;
+    }
+    .gift-items {
+      display: flex; /* 
+      justify-content: center; */
+      align-items: center;
+      flex-wrap: wrap;
+      width: 45vw;
+      .gift-item {
+        cursor: pointer;
+        margin: 1vw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 13vw;
+        height: auto;
+        border-radius: 0.25rem;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        padding: 1vw;
+        transition: 0.2s;
+        &:hover {
+          /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); */
+          img {
+            margin: 0.5vw 0 1.5vw 0;
+          }
+        }
+        .heart-icon-cont {
+          position: absolute;
+          right: 0;
+          margin: 0.2vw 1.2vw;
+          i {
+            font-size: 1.1vw;
+            font-weight: 500;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition: 0.2s;
+            transform: translate(-50%, -50%);
+            color: $red-1;
+            &:hover {
+              transform: translate(-50%, -50%) scale(1.15);
+            }
+          }
+        }
+        img {
+          transition: 0.3s;
+          position: relative;
+          text-align: center;
+          margin: 1vw 0;
+          width: 100%;
+        }
+        h1 {
+          font-size: 25px;
+          font-weight: 700;
+          text-align: start;
+          margin: 0;
+        }
+        h2 {
+          font-size: 18px;
+          font-weight: 700;
+          color: $black-opa-5;
+          text-align: start;
+        }
+      }
+    }
+  }
+  .mail-box {
+    margin: 1vw 0;
+    border-radius: 0.25rem;
+    background-color: $red-1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 40vh;
+    padding: 0 2vw;
+    .mail-box-text-container {
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      h1 {
+        color: $dirty-white;
+        font-size: 32;
+        font-weight: 700;
+      }
+      p {
+        width: 90%;
+        font-weight: 700;
+        color: $dirty-white;
+      }
+      .mail-input-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        input {
+          @include mail-input(2vw, 0 0.3vw);
+        }
+        textarea {
+          @include mail-input(8vw, 0.3vw);
+        }
+        button {
+          cursor: pointer;
+          padding: 0.3vw 2.5vw;
+          border-radius: 30px;
+          background-color: $dirty-white;
+          color: $red-1;
+          font-weight: 700;
+          font-size: 18px;
+          border: none;
+          transition: 0.1s;
+          border: 2px solid $dirty-white;
+          &:hover {
+            border: 2px solid $dirty-white;
+            background-color: $red-1;
+            color: $dirty-white;
+          }
+        }
+      }
+    }
+    img {
+      height: 80%;
+      width: 40%;
+    }
+  }
+}
+
+.feedback {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3vw 0.5vw;
+  border-radius: 0.25rem;
+  background-color: $success;
+  color: #fff;
+  position: fixed;
+  right: -18vw;
+  position: fixed;
+  margin: 1vw;
+  bottom: 0;
+  transition: 0.3s;
+  h1 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 2vw;
+  }
+  i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem;
+    padding: 0.2vw;
+    border: 1px solid $dirty-white;
+    width: 1.4vw;
+    height: 1.4vw;
   }
 }

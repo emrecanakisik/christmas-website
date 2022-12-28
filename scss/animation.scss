@@ -14,36 +14,6 @@
     left: 8vw;
     bottom: 13.8vw;
   }
-  /* 0% {
-    transform: rotate(90deg);
-  }
-  70% {
-    transform: rotate(90deg);
-    bottom: 16.4vw;
-    left: 20vw;
-  }
-  75% {
-    transform: rotate(85deg);
-    bottom: 16.4vw;
-    left: 17vw;
-  }
-  80% {
-    bottom: 15.8vw;
-    left: 14vw;
-    transform: rotate(75deg);
-  }
-  85% {
-    bottom: 15.5vw;
-    left: 12vw;
-    transform: rotate(60deg);
-  }
-  90% {
-    bottom: 15vw;
-    transform: rotate(40deg);
-  }
-  95% {
-    transform: rotate(20deg);
-  } */
 }
 
 @keyframes i3 {
@@ -99,5 +69,43 @@
   }
   95% {
     transform: rotate(-1deg);
+  }
+}
+
+/* HEART ICON */
+@keyframes heartClick {
+  to {
+    font-weight: 600;
+  }
+  40% {
+    font-size: 2vw;
+    font-weight: 600;
+  }
+}
+
+@keyframes heartUnClick {
+  16% {
+    transform: translate(-50%, -50%) rotate(30deg);
+    font-weight: 600;
+  }
+  37% {
+    transform: translate(-50%, -50%) rotate(-30deg);
+    font-weight: 600;
+  }
+  48% {
+    transform: translate(-50%, -50%) rotate(50deg);
+    font-weight: 600;
+  }
+  64% {
+    transform: translate(-50%, -50%) rotate(-50deg);
+    font-weight: 600;
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(30deg);
+    font-weight: 600;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    font-weight: 500;
   }
 }
